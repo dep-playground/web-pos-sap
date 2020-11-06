@@ -46,7 +46,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="node_modules/admin-lte/index3.html" class="brand-link">
+    <a href="#" class="brand-link">
       <img src="node_modules/admin-lte/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">WEBPOS</span>
@@ -117,8 +117,57 @@
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                <span class="icon pr-2">
+                  <i class="fas fa-plus"></i>
+                </span>
+                New Customer
+              </button>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">New Customer</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="inputfirstname4">First Name</label>
+                            <input type="email" class="form-control" id="inputfirstname4">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="inputlastname4">Last Name</label>
+                            <input type="password" class="form-control" id="inputlastname4">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputAddress">Address</label>
+                          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                        </div>
+                        <div class="form-group">
+                          <label for="inputAddress2">Address 2</label>
+                          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                        </div>
+                        <div class="form-group">
+                          <label for="inputGroupFile01">Profile Picture</label>
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                            <label class="form-control custom-file-label" for="inputGroupFile01">Choose Profile Photo</label>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Customer</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
