@@ -112,13 +112,75 @@
     <div class="content-header">
       <div class="container-fluid">
         <div class="row mb-2">
-          <div class="col-sm-6">
+          <div class="col-sm-6 col-12">
             <h1 class="m-0 text-dark">Manage Items</h1>
           </div><!-- /.col -->
-          <div class="col-sm-6">
+          <div class="col-sm-6 col-12 mt-sm-0 mt-2">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
+              <!-- Button trigger modal -->
+              <button type="button" class="btn btn-primary mr-2" data-toggle="modal" data-target="#exampleModal">
+                <span class="icon pr-2">
+                  <i class="fas fa-plus-circle"></i>
+                </span>
+                New Item
+              </button>
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">New Item</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="inputitemname4">Item Name</label>
+                            <input type="text" class="form-control" id="inputitemname4">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="inputitemcategory4">Item Category</label>
+                            <input type="text" class="form-control" id="inputitemcategory4">
+                          </div>
+                        </div>
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="inputunitprice">Unit Price</label>
+                            <input type="text" class="form-control" id="inputunitprice" placeholder="100.00">
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="inputquantity">Quantity</label>
+                            <input type="text" class="form-control" id="inputquantity" placeholder="100">
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="inputGroupFile01">Item Photo</label>
+                          <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                            <label class="form-control custom-file-label" for="inputGroupFile01">Choose Item Photo</label>
+                          </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Save Item</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="btn btn-danger mr-2">
+                <span class="icon pr-2">
+                  <i class="fas fa-minus-circle"></i>
+                </span>
+                Delete Item
+              </button>
+              <button type="button" class="btn btn-success mr-2">
+                <span class="icon pr-2">
+                  <i class="fas fa-download"></i>
+                </span>
+                Update Item
+              </button>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -129,54 +191,65 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <!-- Small boxes (Stat box) -->
         <div class="row">
-          <div class="col-lg-4 col-12">
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>150</h3>
-
-                <p>Customers</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-users"></i>
-              </div>
-            </div>
+          <div class="col-md-12 pb-2">
+            <button type="button" class="btn btn-primary">
+              Items <span class="badge badge-light ml-2">3</span>
+            </button>
           </div>
-          <!-- ./col -->
-          <div class="col-lg-4 col-12">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>53<sup style="font-size: 20px">%</sup></h3>
-
-                <p>Items</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-list-ol"></i>
-              </div>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-4 col-12">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>44</h3>
-
-                <p>Orders</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-shopping-cart"></i>
-              </div>
-            </div>
-          </div>
-          <!-- ./col -->
         </div>
-        <!-- /.row -->
-        <!-- Main row -->
-        <!-- /.row (main row) -->
+      </div>
+      <div class="container-fluid">
+        <table class="table table-hover bg-white">
+          <thead class="thead-light">
+          <tr>
+            <th scope="col" class="leftmost">
+              <input type="checkbox" id="select_all">
+              <label for="select_all"><span></span></label>
+            </th>
+            <th scope="col">Item ID</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Item Category</th>
+            <th scope="col">Unit Price</th>
+            <th scope="col">Quantity on Hand</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td class="">
+              <input type="checkbox" id="item_1" value="1">
+              <label for="item_1"><span></span></label>
+            </td>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>100.00</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td class="">
+              <input type="checkbox" id="customers_2" value="2">
+              <label for="customers_2"><span></span></label>
+            </td>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>100.00</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td class="">
+              <input type="checkbox" id="customers_3" value="3">
+              <label for="customers_3"><span></span></label>
+            </td>
+            <th scope="row">3</th>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>100.00</td>
+            <td>100</td>
+          </tr>
+          </tbody>
+        </table>
       </div><!-- /.container-fluid -->
     </section>
   </div>
