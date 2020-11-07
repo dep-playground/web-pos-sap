@@ -169,15 +169,9 @@
               </div>
               <button type="button" class="btn btn-danger mr-2">
                 <span class="icon pr-2">
-                  <i class="fas fa-minus-circle"></i>
+                  <i class="fas fa-trash"></i>
                 </span>
-                Delete Customer
-              </button>
-              <button type="button" class="btn btn-success mr-2">
-                <span class="icon pr-2">
-                  <i class="fas fa-download"></i>
-                </span>
-                Update Customer
+                Delete Customers
               </button>
             </ol>
           </div><!-- /.col -->
@@ -188,64 +182,148 @@
 
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12 pb-2">
-            <button type="button" class="btn btn-primary">
-              Customers <span class="badge badge-light ml-2">3</span>
-            </button>
+      <!-- Default box -->
+      <div class="card">
+        <div class="card-header">
+          <h3 class="card-title">Customers</h3>
+
+          <div class="card-tools">
+            <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+              <i class="fas fa-minus"></i></button>
           </div>
         </div>
+        <div class="card-body p-0">
+          <table class="table table-striped projects table-head-fixed">
+            <thead>
+            <tr>
+              <th style="width: 5%">
+                <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="far fa-square"></i>
+                </button>
+              </th>
+              <th style="width: 10%">
+                Customer ID
+              </th>
+              <th style="width: 10%">
+                Customer Name
+              </th>
+              <th style="width: 10%">
+                Customer Address
+              </th>
+              <th style="width: 10%">
+                Display Photo
+              </th>
+              <th style="width: 20%">
+              </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>
+                <div class="icheck-primary">
+                  <input type="checkbox" value="" id="check1">
+                  <label for="check1"></label>
+                </div>
+              </td>
+              <td>
+                1
+              </td>
+              <td>
+                <a>
+                  Lucky
+                </a>
+                <br/>
+                <small>
+                  Prabath
+                </small>
+              </td>
+              <td>
+                <a>
+                  Galle
+                </a>
+              </td>
+              <td>
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <img alt="Avatar" class="table-avatar" src="node_modules/admin-lte/dist/img/avatar.png">
+                  </li>
+                </ul>
+              </td>
+              <td class="project-actions text-right">
+                <a class="btn btn-primary btn-sm" href="#">
+                  <i class="fas fa-folder">
+                  </i>
+                  View
+                </a>
+                <a class="btn btn-info btn-sm" href="#">
+                  <i class="fas fa-pencil-alt">
+                  </i>
+                  Edit
+                </a>
+                <a class="btn btn-danger btn-sm" href="#">
+                  <i class="fas fa-trash">
+                  </i>
+                  Delete
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="icheck-primary">
+                  <input type="checkbox" value="" id="check2">
+                  <label for="check2"></label>
+                </div>
+              </td>
+              <td>
+                2
+              </td>
+              <td>
+                <a>
+                  Danuka
+                </a>
+                <br/>
+                <small>
+                  Ashan
+                </small>
+              </td>
+              <td>
+                <a>
+                  Hambanthota
+                </a>
+              </td>
+              <td>
+                <ul class="list-inline">
+                  <li class="list-inline-item">
+                    <img alt="Avatar" class="table-avatar" src="node_modules/admin-lte/dist/img/avatar04.png">
+                  </li>
+                </ul>
+              </td>
+              <td class="project-actions text-right">
+                <a class="btn btn-primary btn-sm" href="#">
+                  <i class="fas fa-folder">
+                  </i>
+                  View
+                </a>
+                <a class="btn btn-info btn-sm" href="#">
+                  <i class="fas fa-pencil-alt">
+                  </i>
+                  Edit
+                </a>
+                <a class="btn btn-danger btn-sm" href="#">
+                  <i class="fas fa-trash">
+                  </i>
+                  Delete
+                </a>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.card-body -->
       </div>
-      <div class="container-fluid">
-        <table class="table table-hover bg-white">
-          <thead class="thead-light">
-          <tr>
-            <th scope="col" class="leftmost">
-              <input type="checkbox" id="select_all">
-              <label for="select_all"><span></span></label>
-            </th>
-            <th scope="col">Customer ID</th>
-            <th scope="col">First Name</th>
-            <th scope="col">Last Name</th>
-            <th scope="col">Address</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr>
-            <td class="">
-              <input type="checkbox" id="customers_1" value="1">
-              <label for="customers_1"><span></span></label>
-            </td>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <td class="">
-              <input type="checkbox" id="customers_2" value="2">
-              <label for="customers_2"><span></span></label>
-            </td>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <td class="">
-              <input type="checkbox" id="customers_3" value="3">
-              <label for="customers_3"><span></span></label>
-            </td>
-            <th scope="row">3</th>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>@twitter</td>
-          </tr>
-          </tbody>
-        </table>
-      </div><!-- /.container-fluid -->
+      <!-- /.card -->
+
     </section>
+    <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
