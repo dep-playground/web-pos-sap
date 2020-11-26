@@ -6,6 +6,7 @@ module.exports = {
     output:{
         filename: 'main.bundle.js',
         publicPath: '',
+        path: __dirname + '/dist',
         assetModuleFilename: 'asset/[hash][ext][query]'
     },
     module: {
