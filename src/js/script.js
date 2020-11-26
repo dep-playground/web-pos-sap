@@ -1,4 +1,4 @@
-
+import $ from 'jquery'
 
 $("#dashboard-nav").click(function (){
     clearClasses();
